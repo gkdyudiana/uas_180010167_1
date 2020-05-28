@@ -46,8 +46,7 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
     private SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy");
     private boolean updateData = false;
     private int idFilm = 0;
-    private Button btnSimpan, btnPilihTahun;
-    private String tahunFilm;
+    private Button btnSimpan;
 
 
     @Override
@@ -62,7 +61,6 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
         editSipnosis = findViewById(R.id.edit_sipnosis);
         ivFilm = findViewById(R.id.iv_film);
         btnSimpan = findViewById(R.id.btn_simpan);
-        btnPilihTahun = findViewById(R.id.btn_pilih_tahun);
 
 
         dbHandler = new DatabaseHandler(this);
@@ -85,7 +83,6 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
 
         ivFilm.setOnClickListener(this);
         btnSimpan.setOnClickListener(this);
-        btnPilihTahun.setOnClickListener(this);
 
     }
 
@@ -218,17 +215,6 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
         Toast.makeText(this, "Film dihapus", Toast.LENGTH_SHORT).show();
     }
 
-    private void pilihTahun() {
-        // mengambil tanggal saat ini
-        final Calendar calendar = Calendar.getInstance();
-        DatePickerDialog pickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                tahunFilm = dayOfMonth + "/" + month + "/" + year;
-
-            }
-        }, calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
-    }
 
 
 
@@ -240,8 +226,6 @@ public class InputActivity extends AppCompatActivity implements View.OnClickList
             simpanData();
         } else if (idView == R.id.iv_film) {
             pickImage();
-        }else if (idView == R.id.btn_pilih_tahun) {
-            pilihTahun();
         }
     }
 }

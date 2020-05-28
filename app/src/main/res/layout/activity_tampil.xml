@@ -61,11 +61,20 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/iv_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_film"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Sinopsis:"/>
+
+        <TextView
             android:id="@+id/tv_sipnosis"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_pemain"
-            android:layout_toRightOf="@id/iv_film"
+            android:layout_below="@id/iv_label"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="@dimen/small_margin"
             android:text="@string/sipnosis"
             android:textSize="@dimen/medium_text" />

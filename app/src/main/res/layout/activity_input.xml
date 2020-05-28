@@ -13,17 +13,14 @@
         android:padding="5dp"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/gambar" />
-
 
         <ImageView
             android:id="@+id/iv_film"
-            android:layout_width="256dp"
+            android:layout_width="140dp"
+            android:layout_gravity="center"
             android:layout_height="192dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="15dp"
             android:layout_weight="1"
             android:contentDescription="@string/gambar"
             app:srcCompat="@drawable/ic_launcher_foreground" />
@@ -59,13 +56,6 @@
                     android:ems="10"
                     android:hint="@string/tahun_terbit"
                     android:inputType="date" />
-
-                <Button
-                    android:id="@+id/btn_pilih_tahun"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/pilih_tahun" />
-
 
 
                 <TextView
