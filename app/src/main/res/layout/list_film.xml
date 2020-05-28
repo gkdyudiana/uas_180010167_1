@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="7dp"
+    app:cardElevation="@dimen/small_margin"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:layout_margin="@dimen/small_margin">
+
+        <ImageView
+            android:id="@+id/iv_film"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_height="300dp"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+
+
+            <TextView
+                android:id="@+id/tv_judul"
+                android:layout_below="@+id/iv_film"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/judul_film"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="4dp"
+                android:textSize="@dimen/medium_text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_headline"
+                android:layout_below="@id/tv_judul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:text="@string/genre" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
