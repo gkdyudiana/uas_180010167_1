@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/item_menu_tambah"
-        android:icon="@drawable/ic_add_white_24dp"
+        android:icon="@drawable/ic_add_circle_white_24dp"
         android:title="@string/tambah"
         app:showAsAction="always" />
 </menu>
